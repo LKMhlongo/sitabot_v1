@@ -1,0 +1,268 @@
+{"intents": [
+  {"tag": "greeting",
+    "patterns": ["Hi","Good afternoon","Good morning","Good Evening", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings","Ciao"],
+    "responses": ["Hello!", "Good to see you!", "Hi there, how can I help?","What can I do for you?","Hello. How may I assist you today?"],
+    "context_set": ""
+  },
+  {"tag": "no_answer",
+    "patterns":[],
+    "responses": ["Sorry, I did not get that. Please rephrase your question or log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+  },
+  {"tag": "thank_you",
+    "patterns": ["thanks!","ty","Thank you!","Thankyou so much","cheers","appreciate it!"],
+    "responses": [ "Hope I answered to all your questions","No problem. Let me know if there is anything else I can help with.","My pleasure.","You're welcome. Please let me know if you need anything else.","I aim to please."],
+    "context_set": ""
+  },
+  {"tag": "work_overtime",
+    "patterns":["overtime claim","how to claim for overtime","submit overtime claim"],
+    "responses":["Please submit approved overtime memo, signed time sheets, and approved manual leave form  within 3 months following the overtime worked. To see if you qualify for overtime, please read sections 7.16 of the SITA leave policy at: </li><li> <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf</a> "],
+    "context_set": ""
+  },
+  {"tag": "erp",
+    "patterns":["erp access","erp credentials","erp system"],
+    "responses":["To access SITA ERP please contact your HCM business partner"],
+    "context_set": ""
+  },
+  {"tag": "payslip",
+    "patterns":["how do I get a copy of my payslip","my payslip"],
+    "responses":["Please visit: <a href='https://portal.sita-hr.gov.za/SITAEndUser'>https://portal.sita-hr.gov.za/SITAEndUser</a>"],
+    "context_set": ""
+},
+  {"tag": "cancel_leave",
+    "patterns":["I want to cancel leave","how do I cancel leave","leave cancellation","leave cancel", "I want to cancel my leave"],
+    "responses":["To cancel leave, please download leave cancellation memo at: <a href='http://intranet.sita.co.za/?q=content/hr-forms'>http://intranet.sita.co.za/?q=content/hr-forms</a> </li><li>Complete the form </li><li> Obtain approval from your line manager </li><li> Send the form to the HR Practitioners"],
+    "context_set": ""
+},
+  {"tag": "leave_pending",
+    "patterns":["leave status is on pending approval","leave status is pending approval","leave pending","leave status pending", "my leave status pending", "pending leave", "pending leave status", "my leave pending"],
+    "responses":["Please  send the screenshot of the pending approval leave application to HR Practitioners"],
+    "context_set": ""
+},
+  {"tag": "leave_work_in_progress",
+    "patterns":["leave status is on save for later and work in progress status","leave status in progress","leave status on save for later","leave status save for later", "my leave status save for later", "progress leave status"],
+    "responses":["On SITA intranet follow these instructions: </li><li> Click ERP </li><li> Employee self service menu </li><li> Leave of absence </li><li> Create absence </li><li> Enter dates and supporting documents when required </li><li> Click Submit"],
+    "context_set": ""
+},
+  {"tag": "error_on_application",
+    "patterns":["Error message displaying application will result in a negative","application will result in a negative","application error message","application negative","application negative error"],
+    "responses":["This error message might be caused by insufficient leave credits or PTO issue. </li><li> Please log a call via the HCM teleservice system at <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "book_leave",
+    "patterns":["I want to book my leave ","leave booking","I want to apply for leave"],
+    "responses":["On SITA intranet follow these instructions: </li><li> Click ERP </li><li> Click Employee self service menu </li><li> Click All actions awaiting your attention </li><li> Click on yellow pen </li><li> Click Update </li><li> Click calculate duration </li><li> Click Submit. </li><li> For more info on SITA leave please visit: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf</a>"],
+    "context_set": ""
+},
+  {"tag": "leave_balance_is_0",
+    "patterns":["I currently have sufficient leave days but when I check for the next month, I see the balance of 0","my leave balance is 0","0 leave balance","sufficient leave","insufficient leave balance"],
+    "responses":["It is a PTO issue due to your 12-cycle breakage. </li><li> The leave to be forfeited is always leave from the previous leave cycle (which only happens after 18 months from your appointment month). </li><li> It will never interfere with the current leave. </li><li> If you date track to the next leave cycle before your new leave cycle commences, the system will show a 0 because the carry-over program runs automatically on each employees new leave cycle start date. </li><li> This makes it impossible for an employee to view the available leave balances or load their leave falling within their next cycle. </li><li> Available days will be carried over by the system on your anniversary or appointment date. </li><li> This system is date driven. The date tracking in terms of leave is a way of establishing how many leave days will an employee have at certain date if the employee does not use any leave. </li><li> The system gives days based on the current situation. For more info please read SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf</a>"],
+    "context_set": ""
+},
+  {"tag": "forfeited_leave",
+    "patterns":["How many days did I forfeit?","How many leave days did I forfeit?","leave days forfeited","forfeited leave days","How many days of leave did I forfeit","lost leave days", "leave days lost", "how many leave days did I loss"],
+    "responses":["To see how many leave days you forfeited please go to ERP and follow these instructions: </li><li> Click on employee self service menu </li><li> Leave of absence </li><li> Entitlement balances </li><li> Show  accruals  balances and use the calender to insert your leave forfeiture date </li><li> Click Go. </li><li> For more info please read SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i."],
+    "context_set": ""
+},
+  {"tag": "compulsory forfeiture leave",
+    "patterns":["what is my leave forfeiture date for compulsory leave?","forfeiture leave compulsory"],
+    "responses":["Leave forfeiture date is always the last day of the 18th month after  your own anniversary or appointment date, full 18th month cycle. </li><li> For more info please read SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i."],
+    "context_set": ""
+},
+  {"tag": "leave_forfeiture_date_for_long_leave",
+    "patterns":["what is my leave forfeiture date for long leave?","forfeiture long leave", "long leave forfeiture"],
+    "responses":["Leave forfeiture date is always the last day of the 12th month after  your own anniversary or appointment date, full 12 month cycle.</li><li> For more info please read SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i."],
+    "context_set": ""
+},
+  {"tag": "half_day_calculation",
+    "patterns":["Half a day calculation displaying full day","half day calculation"],
+    "responses":["On SITA intranet follow these instructions: </li><li> Click on employee self service menu </li><li> Click leave of absence </li><li> Click entitlement balances </li><li> Click absence summary </li><li> Enter details of the leave application in question and send screenshot to HR Practitioners "],
+    "context_set": ""
+},
+  {"tag": "rejecting_application",
+    "patterns":["I wanna apply for leave and system is rejecting the application","I want to apply for leave and system is rejecting the application","I want to apply for leave but the system is rejecting my application","system is rejecting my leave application","leave application rejected by the system"],
+    "responses":["Please  go through the SITA Leave policy to check if you qualify for the type of leave you are applying for at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf</a>"],
+    "context_set": ""
+},
+  {"tag": "reinstate_travelling_allowance ",
+    "patterns":["reinstate travelling allowance","how to reinstate my travelling allowance ","reinstate travel my allowance"],
+    "responses":["Please log a call via the HCM teleservice system at: <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a> </li><li> For more information on travel claims please read section 13 and 15 of the SITA travel policy at: <a href='http://intranet.sita.co.za/all/Upload/TravelPolicy201107.pdf'>http://intranet.sita.co.za/all/Upload/TravelPolicy201107.pdf</a>"],
+    "context_set": ""
+},
+  {"tag": "leave_balance",
+    "patterns":["how many days do I currently have","how many leave days do I currently have","what is my leave balance"],
+    "responses":["on SITA ERP please follow these instructions: </li><li> Click on employee self service menu </li><li> Click leave of absence </li><li> Click entitlement balances </li><li> Click show  accrual  balances </li><li> Use calender to insert your leave forfeiture date and click Go. </li><li> For more info please check SITA Leave Policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i."],
+    "context_set": ""
+},
+  {"tag": "reinstate_leave",
+    "patterns":["I want to reinstate leave","leave reinstate"],
+    "responses":["Please download the leave planner and the memo at: <a href='http://intranet.sita.co.za/?q=content/hr-forms'>http://intranet.sita.co.za/?q=content/hr-forms</a> </li><li> Complete and motivate the reason, and get it signed by your line manager </li><li> Submit on or after the forfeiture date"],
+    "context_set": ""
+},
+  {"tag": "leave_overlaps",
+    "patterns":["leave overlaps with another","my leave is overlapping with another ","overlapping leave"],
+    "responses":["Go to absence and check if leave is captured, the system cannot accept leave application of the same date"],
+    "context_set": ""
+},
+  {"tag": "2 cycle_leave",
+    "patterns":["leave cannot be captured over 2 cycles","2 cycle leave","leave cant be captured over 2 cycles"],
+    "responses":["Please capture leave application separately, dates should not overlap to your next new cycle.</li><li> For more information on SITA leave cycle please read section 7.1 of the SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i."],
+    "context_set": ""
+},
+  {"tag": "overtime_claim",
+    "patterns":["claim for overtime","overtime claim","how to claim for overtime worked"],
+    "responses":["Please submit approved overtime memo, signed time sheets and approved manual leave form within 3 months following the overtime worked. </li><li> To check if you qualify for overtime please check section 7.16 of the SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i"],
+    "context_set": ""
+},
+  {"tag": "terminate_beneficiary",
+    "patterns":["I want to add or terminate beneficiary of my medical aid ","add medical aid beneficiary","terminate medical aid beneficiary","remove medical aid beneficiary"],
+    "responses":["Please download the form at: <a href='http://intranet.sita.co.za/?q=content/hr-forms'>http://intranet.sita.co.za/?q=content/hr-forms</a></li><li> Submit the form to Human Capital practitioner - Sylvester Hlungwani (Sylvester.Hlungwani@sita.co.za) or Christinah Monageng (Christinah.Monageng@sita.co.za) Kindly note that on Discovery and Medihelp when removing a dependent a detailed e-mail will suffice"],
+    "context_set": ""
+},
+  {"tag": "travel _claim",
+    "patterns":["travel claim","how to claim for travel allowance","travel allowance claim"],
+    "responses":["Please contact finance department. </li><li> For more information on travel claims please read section 13 and 15 of the SITA travel policy at: <a href='http://intranet.sita.co.za/all/Upload/TravelPolicy201107.pdf'>http://intranet.sita.co.za/all/Upload/TravelPolicy201107.pdf</a>"],
+    "context_set": ""
+},
+  {"tag": "banking_details",
+    "patterns":["I want to change my banking details","banking details changes", "bank details"],
+    "responses":["Please download the change of bank details form at: <a href='http://intranet.sita.co.za/?q=content/hr-forms'>http://intranet.sita.co.za/?q=content/hr-forms</a> </li><li> Request the letter to confirm banking details from your bank. </li><li> Sign and submit to HR Practioners "],
+    "context_set": ""
+},
+  {"tag": "change_employee_status",
+    "patterns":["I want to change the employee status","employee status"],
+    "responses":["Please consult with the relevant HRBP to assist with the process"],
+    "context_set": ""
+},
+  {"tag": "letter_of_employment",
+    "patterns":["requesting letter of employment","how can I get my letter of employment?","letter of employment"],
+    "responses":["Please log a call via the HCM teleservice system at: <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "sick_leave_cycle",
+    "patterns":["sick leave cycle", "what is my sick leave cycle"],
+    "responses":["A total of thirty six (36) working days sick leave is allocated to an employee on the day of commencement of employment with the company. The thirty six (36) working days sick leave is allocated for a three-year cycle. Sick leave is updated every three years on the anniversary date of commencement of employment . 12 days are allocated to employees with one year contract with SITA. </li><li> For more information please read section 7.2 of the SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i "],
+    "context_set": ""
+},
+  {"tag": "additional_sick_leave",
+    "patterns":["I want  to apply for additional sick leave","additional sick leave"],
+    "responses":["Please download and complete the additional sick leave memo at: <a href='http://intranet.sita.co.za/?q=content/hr-forms'>http://intranet.sita.co.za/?q=content/hr-forms</a> </li><li> Please get approval from your line manager and HRBP and submit to the wellness office with the sick notes."],
+    "context_set": ""
+},
+  {"tag": "load_bsc",
+    "patterns":["I am struggling to load my BSC","I cant load my BSC","I cannot load my BSC","cant load BSC","balance score card"],
+    "responses":["Please follow these instructions: <a href='http://intranet.sita.co.za/PlayerPackage/index.html'>http://intranet.sita.co.za/PlayerPackage/index.html</a>"],
+    "context_set": ""
+},
+  {"tag": "nominate_change_beneficiary_surname",
+    "patterns":["I want to nominate and, or change beneficiary surname","I want to nominate beneficiary","I want to change beneficiary surname","change beneficiary details"],
+    "responses":["Please log a call via the HCM teleservice system at: <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "change_home_address_or_cellphone_number",
+    "patterns":["I want to change home address or change cellphone number","I want to change my cell phone number","I want to change my home address","change cellphone","change home address"],
+    "responses":["Please download the form from at: <a href='http://intranet.sita.co.za/?q=content/human-resource'>http://intranet.sita.co.za/?q=content/human-resource</a> </li><li> Complete the form and submit together with your ID document or birth certificate to HR Practitioners "],
+    "context_set": ""
+},
+  {"tag": "change_pension_contribution",
+    "patterns":["I want to change my pension contribution","pension contribution changes"],
+    "responses":["Please download the pension contribution form at: <a href='http://intranet.sita.co.za/?q=content/benefits-and-pensions'>http://intranet.sita.co.za/?q=content/benefits-and-pensions</a> </li><li> Complete the form and submit to HR Practitioners"],
+    "context_set": ""
+},
+  {"tag": "any_payroll_related_queries",
+    "patterns":["payroll queries", "payroll related queries"],
+    "responses":["Please log a call via the HCM teleservice system at: <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "any_recruitment_related_queries",
+    "patterns":["recruitment query"],
+    "responses":["Please log a call via the HCM teleservice system at: <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "employee_queries",
+    "patterns":["employee query", "employment query"],
+    "responses":["Please log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "counselling_query",
+    "patterns":["employee counselling", "counselling query", "i need counselling", "how do i get counselling"],
+    "responses":["For counselling. Please log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "performance_queries",
+    "patterns":["performance query"],
+    "responses":["Please log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "benefit_queries",
+    "patterns":["benefit query", "SITA benefits","my benefits"],
+    "responses":["Please log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+},
+  {"tag": "learning_and_training",
+    "patterns":["learning and training", "SITA training","SITA training"],
+    "responses":["Please log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+    },
+  {"tag": "personalinfo",
+    "patterns":["Error when updating personal data"],
+    "responses":["Please log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+    },
+  {"tag": "eservice",
+    "patterns":["I cannot register on e-services", "I cannot register on e-services", "I can not register on eservices", "I cant register on eservices"],
+    "responses":["Please log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+  },
+  {"tag": "grievance_query",
+    "patterns":["grievance query", "i need to lodge a grievance", "grievance lodge", "sita grievance"],
+    "responses":["Please contact your  HRBP for assistance"],
+    "context_set": ""
+    },
+  {"tag": "discrepancy_query",
+    "patterns":["there is a discrepancy in leave capturing on HR and OTL", "leave discrepancy"],
+    "responses":["Please request your manager to provide you with the missing dates and log a call via the HCM teleservice system at: \n <a href='http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890'>http://scenappprd04.sita.co.za:8080/apex/f?p=870:LOGIN_DESKTOP:13218151749890</a>"],
+    "context_set": ""
+    },
+  {"tag": "leave_documents",
+    "patterns":["My leave is approved and I need to attached the supporting documents", "loading supporting documents"],
+    "responses":["Please download leave cancellation memo at: <a href='http://intranet.sita.co.za/?q=content/hr-forms'>http://intranet.sita.co.za/?q=content/hr-forms</a> </li><li>Complete the form </li><li> Obtain approval from your line manager </li><li> Complete the form and obtain approval from your lime manager and send to HR Practitioners"],
+    "context_set": ""
+     },
+  {"tag": "next_of_kin",
+    "patterns":["how do i update next of kin", "unable to update next of kin", "i want to update next of kin"],
+    "responses":["Click on the employee self service, click on personal information and add next of kin details"],
+    "context_set": ""
+    },
+  {"tag": "psa_membership",
+    "patterns":["i want to cancel my psa membership", "psa membership"],
+    "responses":["Please write a cancellation letter to madimetja.mautla@psa.co.za and emily.maswanganye@psa.co.za and copy Sylvester Hlungwani (Sylvester.Hlungwani@sita.co.za) and Christinah Monageng (Christinah.Monageng@sita.co.za"],
+    "context_set": ""
+     },
+  {"tag": "sita_bursary",
+    "patterns":["When bursary advertised", "sita bursary"],
+    "responses":["twice annually  for the mid year intake and january  intake ,  corporate com  will be pulished  via Corporate communication"],
+    "context_set": ""
+       },
+  {"tag": "bursary",
+    "patterns":["is the bursary programme applicable to fix term contractors", "is the bursary scheme applicable to fix term contractors", "sita bursary"],
+    "responses":["Yes, provided that the employee's employment contract covers the bursary work-back obligation requirements"],
+    "context_set": ""
+           },
+  {"tag": "bursary",
+    "patterns":["is the bursary programme applicable to fix term contractors", "is the bursary scheme applicable to fix term contractors", "sita bursary"],
+    "responses":["Yes, provided that the employee's employment contract covers the bursary work-back obligation requirements. Also note that the bursary scheme covers for formal programmes that are one year upward accredited by SAQA and are NQF aligned"],
+    "context_set": ""
+     },
+  {"tag": "maternity_leave ",
+    "patterns":["I want to capture half a day maternity leave", "half a day maternity leave"],
+    "responses":["Please log into employee self service and capture half a day per each day for the full 2 months period. For more on maternity leave please read section 7.9 of the SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf</a>"],
+    "context_set": ""
+      },
+  {"tag": "paternity_leave ",
+    "patterns":["how does paternity leave works", "I want to take paternity leave"],
+    "responses":["Paid paternity leave of  5 days or a week  to be taken in a month in four consecutive months following the birth of the child. For more on maternity leave please read section 7.6 of the SITA leave policy at: <a href='http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf'>http://intranet.sita.co.za/all/Upload/SITA%20Leave%20Policy_Board%20Nov2020i.pdf</a>"],
+    "context_set": ""
+}
+]
+}
